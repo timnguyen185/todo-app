@@ -9,3 +9,9 @@ def list_tasks():
     else:
         for i, task in enumerate(tasks):
             print(f"{i + 1}. {task}")
+
+def delete_task(index):
+    if 0 <= index < len(tasks):
+        tasks.pop(index)
+    else:
+        print("Invalid task number")
